@@ -1,0 +1,19 @@
+Describe any design decisions you made.
+The decision I made in PA2 is the page replacement policy. It is a variant of least referenced policy.
+The idea is, evict the least page with the least reference count. However, when two pages has same reference count, it will evict the dirty one.
+It is a very simple policy and has many drawbacks.
+
+Discuss and justify any changes you made to the API.
+Nothing changed to API.
+
+Describe any missing or incomplete elements of your code.
+I did not implement the bonus part.
+
+Describe how long you spent on the assignment, and whether there was anything you found particularly difficult or confusing.
+I spend around 16 hours for this assignment. The most difficult part is considering the life time of a pointer.
+For example, the map used PageId pointer as the key, the reason to use pointer instead of value is that PageId is a virtual class, the size of the object can not be
+determined at the compile stage. However, using pointer you have to considering where the content exist of this pointer, how long it will live, ect. It should live as
+long as the value lives. Thinking about this is the most difficult part. (That is the reason that makes me considering Rust is a better language for database.)
+
+If you collaborate with someone else, you have to describe how you split the workload.
+I have done this job alone.
